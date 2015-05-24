@@ -19,7 +19,7 @@ public class ConexaoUtil {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/bemcasados_tap1", "postgres", "postgres");
+			con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/bemcasados_tap1", "postgres", "admim");
 			
 			
 			System.out.println("Conectado com sucesso!!!");
