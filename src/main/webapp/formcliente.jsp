@@ -48,15 +48,12 @@ Cliente cliente = (Cliente) request.getAttribute("cliente");
     <br />--> 
      
       <select size="1" name="idCliente" id="idCliente">
-		<option selected value  = "">Selecione!</option>
-		<c:forEach items="${requestScope.lista}" var="cliente">
+		<option selected value  = "0">Selecione!</option>
+		<c:forEach items="${requestScope.listacli}" var="cliente">
 			<option value="${cliente.id}"><c:out value="${cliente.nome}"></c:out></option>
 		</c:forEach>
 	</select>
    
-  
-	
-
 <input type ="submit" value="Salvar"/>
 
 </form>

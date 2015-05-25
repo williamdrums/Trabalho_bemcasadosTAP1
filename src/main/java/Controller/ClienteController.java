@@ -83,14 +83,14 @@ public class ClienteController extends HttpServlet {
 		if(acao!=null && acao.equals("lis")){
 //			obeter a lista
 		
-        List<Cliente> lista = cliDAO.buscarTodos();
+        List<Cliente> listacli = cliDAO.buscarTodos();
 //	saida para o browser
 //	PrintWriter saida = resp.getWriter();
 //	saida.print(lista);
 	
 	
 //	engaveta no request a lista
-	req.setAttribute("lista", lista);
+	req.setAttribute("listacli", listacli);
 	
 	RequestDispatcher saida = req.getRequestDispatcher("listadeclientes.jsp");
 	saida.forward(req, resp);
