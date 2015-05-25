@@ -85,7 +85,7 @@ public class TipoEventoDAO {
 	            Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
 	        }
 	    }
-	        public TipoEvento buscarPorId(Integer id) {
+	        public TipoEvento buscarPorIdEvento(Integer id) {
 
 	        String sql = "SELECT * FROM TIPOEVENDO WHERE idtipoevento=?";
 	        try {

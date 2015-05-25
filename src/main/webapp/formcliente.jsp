@@ -1,4 +1,5 @@
 <%@page import="Classe.Cliente"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,6 +38,24 @@ Cliente cliente = (Cliente) request.getAttribute("cliente");
 <input type ="text" name="email" value="<%=cliente.getEmail() %>"/>
 <br />
 		<br />
+		
+		<label>Cliente</label>
+ <!--  <select size="1" name="Combo">
+    <option selected value="Selecione">Selecione!</option>
+    <option value="2000">William</option>
+    <option value="2001">José</option>
+    <br />
+    <br />--> 
+     
+      <select size="1" name="idCliente" id="idCliente">
+		<option selected value  = "">Selecione!</option>
+		<c:forEach items="${requestScope.lista}" var="cliente">
+			<option value="${cliente.id}"><c:out value="${cliente.nome}"></c:out></option>
+		</c:forEach>
+	</select>
+   
+  
+	
 
 <input type ="submit" value="Salvar"/>
 
